@@ -29,7 +29,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     // Deserialize data
-    let answer: Session = response.json().await?;
+    let answer: Session = response.json().await?; // ! we can get many data to insert
 
     // Connect DB
     let db_url = "postgres://username:password@localhost:5432/mydatabase"; // À adapter
